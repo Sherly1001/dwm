@@ -86,6 +86,18 @@
 "pkill x"
    Shift+Mod4+control + q
 
+
+"~/dwm/dwm-scripts/rootname.sh"
+   XF86AudioRaiseVolume
+"~/dwm/dwm-scripts/rootname.sh"
+   XF86AudioLowerVolume
+"~/dwm/dwm-scripts/rootname.sh"
+   XF86AudioMute
+"~/dwm/dwm-scripts/rootname.sh"
+   XF86MonBrightnessDown
+"~/dwm/dwm-scripts/rootname.sh"
+   XF86MonBrightnessUp
+
 ##################################
 # End of xbindkeys configuration #
 ##################################
