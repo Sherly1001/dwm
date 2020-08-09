@@ -17,7 +17,10 @@ xbindkeys -p &
 ~/dwm/dwm-scripts/ibus.sh &
 ~/dwm/dwm-scripts/bg.sh &
 
-~/dwm/dwm-scripts/rootname.sh &
+while true; do
+    ~/dwm/dwm-scripts/rootname.sh &
+    sleep 5s
+done &
 
 flameshot &
 
