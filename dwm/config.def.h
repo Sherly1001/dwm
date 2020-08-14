@@ -69,6 +69,8 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_Left,   next_tag,       {.i = 0} },
+	{ MODKEY,                       XK_Right,  next_tag,       {.i = 1} },
 	{ MODKEY|ShiftMask,             XK_d,      setopacity,     {.f = -0.05} },
 	{ MODKEY|ShiftMask,             XK_i,      setopacity,     {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_f,      setopacity,     {.f = 2.0} },

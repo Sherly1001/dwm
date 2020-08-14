@@ -273,6 +273,7 @@ static int xerror(Display *dpy, XErrorEvent *ee);
 static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
+static void next_tag(const Arg *arg);
 
 /* variables */
 static Systray *systray =  NULL;
@@ -2522,6 +2523,19 @@ zoom(const Arg *arg)
 		if (!c || !(c = nexttiled(c->next)))
 			return;
 	pop(c);
+}
+
+void next_tag(const Arg *arg) {
+	int next = arg->i;
+	unsigned int cur_tag = selmon->tagset[selmon->seltags];
+	unsigned int next_tag = next ? cur_tag << 1 : cur_tag >> 1;
+	if (next_tag == (1 << 9)) next_tag = 1;
+	if (next_tag == 0) next_tag = 1 << 8;
+
+	selmon->seltags ^= 1;
+	selmon->tagset[selmon->seltags] = next_tag & TAGMASK;
+	focus(NULL);
+	arrange(selmon);
 }
 
 int
