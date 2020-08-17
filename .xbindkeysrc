@@ -66,37 +66,25 @@
 #  Control + b:2 + Release
 
 # Increase volume
-"amixer set Master playback 2+"
+"~/dwm/dwm-scripts/amixer.sh 2+; ~/dwm/dwm-scripts/rootname.sh"
    XF86AudioRaiseVolume
 
 # Decreease volume
-"amixer set Master playback 2-"
+"~/dwm/dwm-scripts/amixer.sh 2-; ~/dwm/dwm-scripts/rootname.sh"
    XF86AudioLowerVolume
 
 # Mute voulume
-"amixer set Master toggle"
+"amixer set Master toggle; ~/dwm/dwm-scripts/rootname.sh"
    XF86AudioMute
 
-"xbacklight -inc 2"
+"xbacklight -inc 5; ~/dwm/dwm-scripts/rootname.sh"
    XF86MonBrightnessUp
 
-"xbacklight -dec 2"
+"xbacklight -dec 5; ~/dwm/dwm-scripts/rootname.sh"
    XF86MonBrightnessDown
 
 "pkill x"
    Shift+Mod4+control + q
-
-
-"~/dwm/dwm-scripts/rootname.sh"
-   XF86AudioRaiseVolume
-"~/dwm/dwm-scripts/rootname.sh"
-   XF86AudioLowerVolume
-"~/dwm/dwm-scripts/rootname.sh"
-   XF86AudioMute
-"~/dwm/dwm-scripts/rootname.sh"
-   XF86MonBrightnessDown
-"~/dwm/dwm-scripts/rootname.sh"
-   XF86MonBrightnessUp
 
 ##################################
 # End of xbindkeys configuration #
