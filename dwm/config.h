@@ -68,8 +68,8 @@ static const char *termcmd[]  = { "sakura", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_Print,  spawn,          SHCMD("flameshot gui") },
-	{ MODKEY,                       XK_g,      spawn,          SHCMD("google-chrome-stable") },
-	{ MODKEY|ShiftMask,             XK_g,      spawn,          SHCMD("google-chrome-stable -incognito") },
+	{ MODKEY,                       XK_g,      spawn,          SHCMD("chromium") },
+	{ MODKEY|ShiftMask,             XK_g,      spawn,          SHCMD("chromium -incognito") },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_Left,   next_tag,       {.i = 0} },
