@@ -14,15 +14,18 @@ numlockx &
 # .xbindkeysrc
 xbindkeys -p &
 
+flameshot &
+amixer set Master 100 &
+amixer set Speaker 70% &
+amixer set Headphone 30% &
+
 ~/dwm/dwm-scripts/ibus.sh &
 ~/dwm/dwm-scripts/bg.sh &
 
 while true; do
-    ~/dwm/dwm-scripts/rootname.sh &
+    ~/dwm/dwm-scripts/rootname.sh
     sleep 5s
 done &
-
-flameshot &
 
 while true; do
     dwm
