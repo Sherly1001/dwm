@@ -10,13 +10,13 @@ st="$(cat /sys/class/power_supply/BAT0/status)"
 # Discharging | Full | Charging
 icon=''
 
-if [[ $pin < '10' ]]; then
+if [[ $pin -le 10 ]]; then
     icon=$pin_0p1
-elif [[ $pin < '30' ]]; then
+elif [[ $pin -le 30 ]]; then
     icon=$pin_1p4
-elif [[ $pin < '55' ]]; then
+elif [[ $pin -le 55 ]]; then
     icon=$pin_1p2
-elif [[ $pin < '75' ]]; then
+elif [[ $pin -le 75 ]]; then
     icon=$pin_3p4
 else
     icon=$pin_1p1
