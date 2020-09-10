@@ -1,5 +1,5 @@
 
-br=$(xbacklight)
+br=$(light)
 br=${br%.*}
 icon=' ҉'
 
