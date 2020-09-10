@@ -5,8 +5,8 @@ xinput set-prop 'DELL0844:00 04F3:3074 Touchpad' 'libinput Tapping Enabled' 1 &
 # tab on touchpad
 xinput set-prop 'DELL0844:00 04F3:3074 Touchpad' 'libinput Natural Scrolling Enabled' 1 &
 
-# xcompmgr for transparent window
-xcompmgr -c &
+# picom for transparent window
+picom --config ~/dwm/picom/picom.conf
 
 # turn on numlock
 numlockx &
